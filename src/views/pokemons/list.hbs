@@ -1,0 +1,34 @@
+<h1>Listado de Pokemons</h1>
+<div class="container p-4">
+    <div class="row">
+        {{#each pokeRegistros}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+
+                    <h2 class="m-2">{{name}}</h2>
+
+                    </p>
+                    <img src="{{imagen}}" style="max-width:200%;width:auto;height:auto;">
+                    <p class="m-2"><strong>Experience:</strong> {{experience}}</p>
+
+                    <p class="m-2"><strong>Habilidades:</strong> {{abilities}}</p>
+                    <p class="m-2"><strong>Tipo:</strong> {{types}}</p>
+
+                    <a href="/pokemons/delete/{{id}}" class="btn btn-danger">Borrar</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-6 mx-auto">
+            <div class="card card-body text-center">
+                <div class="alert alert-danger" role="alert">
+                    <b>No Hay Pokemones Guardados</b>
+                </div>
+                <a href="/pokemons/add" class="btn btn-success">Guarda Pokemones!!!...</a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

@@ -1,0 +1,186 @@
+<body>
+
+    <h1>Battle</h1>
+    <div class="container ">
+        <button id="BtnBotones" class="btn btn-dark btn-lg btn-block">Opciones de Batalla </button>
+    </div>
+    <div class="container mr-1" id="botones">
+
+
+    </div>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="magic">
+
+
+                    <h2> Usuario 1 </h2>
+                    <h3> {{#each pokeRegistros3}} {{username}} {{/each}} </h3>
+                    <h4>VS</h4>
+
+                    {{#each usuarioss}}
+                    <button id="col" name=`{{username}}` type="button" class="btn btn-outline-info btn-lg"
+                        data-toggle="collapse" data-target="#{{username}}">{{username}}</button>
+                    {{/each}}
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+
+                <div class="magic2">
+                    <h2> Usuario 2 </h2>
+                    <h3> Pc</h3>
+                    <h4>VS</h4>
+                    {{#each usuarioss}}
+                    <button id="col" name=`{{username}}` type="button" class="btn btn-outline-info btn-lg"
+                        data-toggle="collapse" data-target="#{{username}}2">{{username}}</button>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class="usuarioS">
+                <div class="usuarioSS">
+{{!-- 
+                    <h2> Usuario </h2>
+                    <h3> {{#each pokeRegistros3}} {{username}} {{/each}} </h3>
+                    <h4>VS</h4>
+                    {{#each usuarioss}}
+                    <button id={{id}} name={{username}} type="button" class="btn btn-outline-info btn-lg"
+                        onclick="(()=>{})()">{{username}}</button>
+                    {{/each}} --}}
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container">
+
+
+                    <div class="oponentOne" id="botoness">
+                        <h3> {{#each pokeRegistros3}} {{username}} {{/each}} </h3>
+                        {{#each pokeRegistros}}
+
+                        <button id={{experience}} type="submit" class="btn btn-outline-info btn-lg" value={{username}}>
+                            usuario: {{username}}-{{user_id}}
+                            Pokemon: {{name}}<br>
+                            <img style="width:50px; height:50px;" src="{{imagen}}" alt="" srcset="">
+
+                            experience {{experience}}<br>
+                            {{!-- Types: {{types}}<br>
+                                Abilities: {{abilities}}<br> --}}
+                        </button>
+                        {{/each}}
+
+                    </div>
+
+                </div>
+
+            <div class="oponentOnee">
+                <div class="magic2">
+
+                 {{#each pokeRegistross}}
+                            <div id="{{username}}2" class="collapse">
+
+                                <button id={{experience}} type="submit" class="btn btn-outline-info btn-lg"
+                                    value={{username}}>
+                                    usuario: {{username}}-{{user_id}}
+                                    Pokemon: {{name}}<br>
+                                    <img style="width:50px; height:50px;" src="{{imagen}}" alt="" srcset="">
+
+                                    experience {{experience}}<br>
+                                    {{!-- Types: {{types}}<br>
+                                Abilities: {{abilities}}<br> --}}
+                                </button>
+                            </div>
+                            {{/each}}
+
+                </div>
+            </div>
+            </div>
+
+
+
+
+
+            <div class="col-sm-4" id="Win">
+
+
+                <div class="wars" id="wars">
+                    <button id={{id}} type="submit" class="btn btn-outline-secondary ml-11" value={{username}}
+                        name="battle">Battle</button>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4">
+
+                <div class="container">
+                    <br>
+
+                    <div class="oponentTwo">
+
+                        {{#each pokeRegistros2}}
+
+                        <button id={{experience}} type="submit" class="btn btn-outline-info btn-lg" value={{username}}>
+                            usuario: {{username}}-{{user_id}}
+                            Pokemon: {{name}}<br>
+                            <img style="width:50px; height:50px;" src="{{imagen}}" alt="" srcset="">
+
+                            experience {{experience}}<br>
+                            {{!-- Types: {{types}}<br>
+                                Abilities: {{abilities}}<br> --}}
+                        </button>
+                        {{/each}}
+
+                    </div>
+                    <div class="oponentTwoo">
+                        <div class="magic">
+
+                            {{#each pokeRegistross}}
+                            <div id="{{username}}" class="collapse">
+
+                                <button id={{experience}} type="submit" class="btn btn-outline-info btn-lg"
+                                    value={{username}}>
+                                    usuario: {{username}}-{{user_id}}
+                                    Pokemon: {{name}}<br>
+                                    <img style="width:50px; height:50px;" src="{{imagen}}" alt="" srcset="">
+
+                                    experience {{experience}}<br>
+                                    {{!-- Types: {{types}}<br>
+                                Abilities: {{abilities}}<br> --}}
+                                </button>
+                            </div>
+                            {{/each}}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="/js/battles.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>

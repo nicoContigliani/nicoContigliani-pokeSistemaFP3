@@ -1,0 +1,138 @@
+<h1>Battle</h1>
+<div class="container">
+
+
+
+    
+    <br>
+    <div class="paralelogramo">
+        <div class="paralelogramob">
+            <h3>Oponente 1</h3>
+
+
+
+        </div>
+
+
+    </div>
+    <br>
+    {{#each pokeRegistros}}
+
+    <button class="btn btn-outline-dark btn-lg btn-block ml-auto">
+
+
+        <div class="container">
+
+            <strong>
+
+                <h4 class="m-2">{{name}} and user {{user_id}}</h4>
+            </strong>
+               
+            <img src="{{imagen}}" style="max-width:30%;width:5%;height:auto;">
+
+            <strong>Experience:</strong> {{experience}}
+            <h6>
+
+                <div class="">
+                    <strong>Habilidades:</strong>
+                    {{abilities}}<strong>Tipo:</strong> {{types}}
+
+                    {{!-- <a href="/Pokemons/delete/{{id}}" class="btn btn-danger">Borrar</a> --}}
+                </div>
+
+            </h6>
+
+        </div>
+    </button>
+    {{/each}}
+    <hr>
+    <br>
+
+    <button class="btn btn-outline-dark btn-lg btn-block ml-auto"> Battle </button>
+
+
+    <br>
+    <hr>
+
+
+   (())=>{alert()}();
+
+  {{#each pokeRegistros}}
+
+    <button class="btn btn-outline-dark btn-lg btn-block ml-auto">
+
+
+        <div class="container">
+
+            <strong>
+
+                <h4 class="m-2">{{name}}</h4>
+            </strong>
+
+            <img src="{{imagen}}" style="max-width:30%;width:5%;height:auto;">
+
+            <strong>Experience:</strong> {{experience}}
+            <h6>
+
+                <div class="">
+                    <strong>Habilidades:</strong>
+                    {{abilities}}<strong>Tipo:</strong> {{types}}
+
+                    {{!-- <a href="/Pokemons/delete/{{id}}" class="btn btn-danger">Borrar</a> --}}
+                </div>
+
+            </h6>
+
+        </div>
+    </button>
+    {{/each}}
+
+    <div class="paralelogramo2">
+        <div class="paralelogramo2b">
+
+            <h3>Oponente 2 </h3>
+
+           
+
+        </div>
+
+    </div>
+</div>
+
+
+
+ {{#each pokeRegistross}}
+
+    <button class="btn btn-outline-dark btn-lg btn-block ml-auto">
+
+
+        <div class="container">
+
+            <strong>
+
+                <h4 class="m-2">{{name}}</h4>
+                {{username}} {{fullname}}
+
+            </strong>
+
+            <img src="{{imagen}}" style="max-width:30%;width:5%;height:auto;">
+
+            <strong>Experience:</strong> {{experience}}
+            <h6>
+
+                <div class="">
+                    <strong>Habilidades:</strong>
+                    {{abilities}}<strong>Tipo:</strong> {{types}}
+
+                    {{!-- <a href="/Pokemons/delete/{{id}}" class="btn btn-danger">Borrar</a> --}}
+                </div>
+
+            </h6>
+
+        </div>
+    </button>
+    {{/each}}
+
+
+
+<script src="/src/public/js/battle.js"></script>
